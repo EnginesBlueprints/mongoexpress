@@ -27,7 +27,7 @@
         "url": "https://opensource.org/licenses/MIT"
       }
     },
-    "timestamp": "2017-06-13 02:40:53 UTC"
+    "timestamp": "2017-06-13 02:55:37 UTC"
   },
   "software": {
     "base": {
@@ -35,6 +35,7 @@
       "framework": "node6.9",
       "deployment_type": "web",
       "http_protocol": "http_and_https",
+      "framework_port_override": 8081,
       "memory": {
         "required": 256,
         "recommended": 385
