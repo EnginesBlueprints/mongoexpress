@@ -27,7 +27,7 @@
         "url": "https://opensource.org/licenses/MIT"
       }
     },
-    "timestamp": "2017-06-13 02:56:35 UTC"
+    "timestamp": "2017-06-25T09:47:54+10:00"
   },
   "software": {
     "base": {
@@ -44,7 +44,7 @@
     "scripts": {
       "start": {
         "language": "sh",
-        "content": "#!/bin/bash\r\nPID_FILE=/tmp/pid\r\nexport PID_FILE\r\n. /home/trap.sh\r\ncp /home/app/config.js  /usr/local/lib/node_modules/mongo-express/ \r\n/usr/local/bin/mongo-express     &\r\necho $! >/tmp/pid\r\ntouch /engines/var/run/flags/startup_complete"
+        "content": "#!/bin/bash\r\nPID_FILE=/tmp/pid\r\nexport PID_FILE\r\n. /home/engines/functions/trap.sh\r\n\r\ncp /home/app/config.js  /usr/local/lib/node_modules/mongo-express/ \r\n/usr/local/bin/mongo-express     &\r\necho $! >/tmp/pid\r\ntouch /engines/var/run/flags/startup_complete\r\nexit"
       },
       "install": {
         "language": "sh",
