@@ -2,8 +2,8 @@
   "schema": {
     "type": "app_blueprint",
     "version": {
-      "major": 1,
-      "minor": 0
+      "major": 0,
+      "minor": 1
     },
     "origin": "Engines Developer Studio 0.2"
   },
@@ -27,7 +27,7 @@
         "url": "https://opensource.org/licenses/MIT"
       }
     },
-    "timestamp": "2017-06-25T09:47:54+10:00"
+    "timestamp": "2019-02-18T10:46:50+11:00"
   },
   "software": {
     "base": {
@@ -62,11 +62,10 @@
         "publisher_namespace": "EnginesSystem",
         "type_path": "database/nosql/mongo",
         "variables": {
-          "rails_flavor": "mongodb",
-          "database_host": "_Engines_System(mongo_host)",
-          "database_name": "_Engines_Builder(engine_name)",
           "db_password": "_Engines_System(random(10))",
-          "db_username": "_Engines_Builder(engine_name)"
+          "db_username": "_Engines_Builder(engine_name)",
+          "database_name": "_Engines_Builder(engine_name)",
+          "database_host": "_Engines_System(mongo_host)"
         }
       },
       {
