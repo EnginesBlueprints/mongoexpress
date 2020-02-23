@@ -27,12 +27,12 @@
         "url": "https://opensource.org/licenses/MIT"
       }
     },
-    "timestamp": "2019-02-18T10:46:50+11:00"
+    "timestamp": "2020-02-23T14:16:10+11:00"
   },
   "software": {
     "base": {
       "name": "mongoexpress",
-      "framework": "node6.9",
+      "framework": "node",
       "deployment_type": "web",
       "http_protocol": "http_and_https",
       "framework_port_override": 8081,
@@ -72,12 +72,14 @@
         "publisher_namespace": "EnginesSystem",
         "type_path": "filesystem/local/filesystem",
         "variables": {
-          "user": "_Engines_Builder(data_uid)",
-          "group": "_Engines_Builder(data_gid)",
           "service_name": "_Engines_Builder(engine_name)",
           "volume_src": "",
           "engine_path": "/home/fs/config",
-          "permissions": "rw"
+          "permissions": "rw",
+          "user": "_Engines_Builder(data_uid)",
+          "group": "_Engines_Builder(data_gid)",
+          "fw_user": "_Engines_Builder(cont_user_id)",
+          "exclude_from_backup": "false"
         }
       }
     ],
