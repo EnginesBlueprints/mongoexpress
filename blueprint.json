@@ -27,7 +27,7 @@
         "url": "https://opensource.org/licenses/MIT"
       }
     },
-    "timestamp": "2020-02-23T14:16:10+11:00"
+    "timestamp": "2020-02-28T19:03:39+11:00"
   },
   "software": {
     "base": {
@@ -44,11 +44,11 @@
     "scripts": {
       "start": {
         "language": "sh",
-        "content": "#!/bin/bash\r\nPID_FILE=/tmp/pid\r\nexport PID_FILE\r\n. /home/engines/functions/trap.sh\r\n\r\ncp /home/app/config.js  /usr/local/lib/node_modules/mongo-express/ \r\n/usr/local/bin/mongo-express     &\r\necho $! >/tmp/pid\r\ntouch /engines/var/run/flags/startup_complete\r\nexit"
+        "content": "#!/bin/bash\r\nPID_FILE=/tmp/pid\r\nexport PID_FILE\r\n. /home/engines/functions/trap.sh\r\n\r\n#cp /home/app/config.js  /usr/local/lib/node_modules/mongo-express/ \r\n/usr/local/bin/mongo-express     &\r\necho $! >/tmp/pid\r\nstartup_complete\r\nwait\r\nexit"
       },
       "install": {
         "language": "sh",
-        "content": "#!/bin/bash\r\ncd /home/app\r\nnpm install -g mongo-express\r\ncp /home/app/config.js  /usr/local/lib/node_modules/mongo-express/"
+        "content": "#!/bin/sh\r\ncd /home/app\r\nnpm install mongo-express\r\n"
       },
       "post_install": {
         "language": "sh"
