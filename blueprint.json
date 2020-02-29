@@ -27,7 +27,7 @@
         "url": "https://opensource.org/licenses/MIT"
       }
     },
-    "timestamp": "2020-02-28T19:03:39+11:00"
+    "timestamp": "2020-02-29T11:52:36+11:00"
   },
   "software": {
     "base": {
@@ -72,11 +72,11 @@
         "publisher_namespace": "EnginesSystem",
         "type_path": "filesystem/local/filesystem",
         "variables": {
-          "service_name": "_Engines_Builder(engine_name)",
+          "service_name": "config",
           "volume_src": "",
-          "engine_path": "/home/fs/config",
+          "engine_path": "",
           "permissions": "rw",
-          "user": "_Engines_Builder(data_uid)",
+          "user": "_Engines_Builder(cont_user_id)",
           "group": "_Engines_Builder(data_gid)",
           "fw_user": "_Engines_Builder(cont_user_id)",
           "exclude_from_backup": "false"
@@ -116,7 +116,8 @@
     },
     "persistent_files": [
       {
-        "path": "app/config.js"
+        "path": "app/config.js",
+        "volume_name": "config"
       }
     ]
   }
