@@ -27,7 +27,7 @@
         "url": "https://opensource.org/licenses/MIT"
       }
     },
-    "timestamp": "2020-02-29T19:30:28+11:00"
+    "timestamp": "2020-02-29T19:43:32+11:00"
   },
   "software": {
     "base": {
@@ -44,7 +44,7 @@
     "scripts": {
       "start": {
         "language": "sh",
-        "content": "#!/bin/bash\r\nPID_FILE=/home/engines/run/mongo-express.pid\r\nexport PID_FILE\r\n. /home/engines/functions/trap.sh\r\n\r\ncp /home/app/config.js  /usr/local/lib/node_modules/mongo-express/ \r\nnode node_modules/mongo-express/app.js  &\r\necho $! >$PID_FILE\r\nstartup_complete\r\nwait\r\nexit"
+        "content": "#!/bin/bash\r\nPID_FILE=/home/engines/run/mongo-express.pid\r\nexport PID_FILE\r\n. /home/engines/functions/trap.sh\r\n\r\ncp /home/app/config.js  /home/app/node_modules/mongo-express/ \r\nnode node_modules/mongo-express/app.js  &\r\necho $! >$PID_FILE\r\nstartup_complete\r\nwait\r\nexit"
       },
       "install": {
         "language": "sh",
